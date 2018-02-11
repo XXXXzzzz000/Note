@@ -7,7 +7,7 @@
 以下是关键的BLE术语和概念的总结：
 
 - **通用属性配置文件(Generic Attribute Profile (GATT))** - GATT配置文件是通过BLE连接发送和接收被称为“属性”的短片段的通用规范。目前所有的低能耗应用程序都基于GATT。
-  - 蓝牙SIG 为低能耗设备定义了许多[配置文件](https://www.bluetooth.com/specifications)。配置文件是设备如何在特定应用程序中工作的规范。请注意，设备可以实现多个配置文件。例如，一个设备可以包含一个心率监测器和一个电池电量检测器。
+  - 蓝牙SIG 为低能耗设备定义了许多[配置文件(profile)](https://www.bluetooth.com/specifications)。配置文件是设备如何在特定应用程序中工作的规范。请注意，设备可以实现多个配置文件。例如，一个设备可以包含一个心率监测器和一个电池电量检测器。
 - **属性协议(Attribute Protocol (ATT))** -GATT建立在属性协议（ATT）之上。这也被称为GATT / ATT。ATT经过优化，可在BLE设备上运行。为此，它使用尽可能少的字节。每个属性由一个通用唯一标识符（UUID）唯一标识，该标识符是用于唯一标识信息的字符串ID的标准化128位格式。ATT传输的属性被格式化为特征和服务。
 - **特性(Characteristic)** - 一个特性包含描述特性值的单个值和0-n个描述符。一个特征可以被认为是一个类，类似于一个阶级。 
 - **描述符(Descriptor)** - 描述符是描述特征值的定义属性。例如，一个描述符可以指定一个人可读的描述，一个特征值的可接受范围，或者一个特征值特有的度量单位。
@@ -32,7 +32,7 @@
 
 如果您希望您的应用启动设备发现或操纵蓝牙设置，则还必须声明该[BLUETOOTH_ADMIN](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_ADMIN) 权限。**注意：**如果您使用[BLUETOOTH_ADMIN](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_ADMIN)权限，那么您还必须拥有[BLUETOOTH](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH)权限。
 
-在应用程序清单文件中声明蓝牙许可。例如：
+在应用程序清单(manifest)文件中声明蓝牙许可。例如：
 
 ```xml
 <uses-permission android：name = “android.permission.BLUETOOTH” /> <uses-permission android：name = “android.permission.BLUETOOTH_ADMIN” /> 
@@ -441,3 +441,9 @@ public void close() {
 
   Android BLE APi演示视频
 
+
+## GitHub上相关的开发框架
+
+- [FastBle](https://github.com/Jasonchenlijian/FastBle)
+- [BluetoothKit](https://github.com/dingjikerbo/BluetoothKit)
+- ...
