@@ -3,7 +3,8 @@
 int main(int argc, char const *argv[])
 {
   printf("%s \n", "hello!");
-  int firefox = 0 for (j = 0; j < 10; j++)
+  int firefox = 0 ;
+  for (int j = 0; j < 10; j++)
   {
     printf("hello\n", );
   }
@@ -12,3 +13,4 @@ int main(int argc, char const *argv[])
 
   return 0;
 }
+
